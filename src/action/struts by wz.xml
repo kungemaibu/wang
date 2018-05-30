@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="aaa" extends="struts-default" namespace="/">
+         <!-- 配置Action的bean -->
+     
+     <action name="findByPages" class="empAction" method="findByPages">
+        <result name="findByPages" >/fenye.jsp</result>
+     </action>
+      <action name="save" class="empAction" method="save">
+        <result name="save" type="chain">findByPages</result>
+     </action>
+       <action name="get" class="empAction"  method="get">
+         <result name="success" >/UpOrder.jsp</result>
+      </action>
+      <action name="update" class="empAction"  method="update">
+         <result name="success" type="chain">findByPages</result>
+      </action>
+      <action name="delete" class="empAction"  method="delete">
+         <result name="success" type="chain">findByPages</result>
+      </action>
+   </package>
+</struts>    

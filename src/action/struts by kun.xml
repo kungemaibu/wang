@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+     <package name="struts" extends="json-default">
+         <action name="kfk_*" class="com.action.controller.CarActions" method="{1}">
+               <result name="findCar">/index4.jsp</result>
+               <result name="findcar">/MyJsp.jsp</result>
+               <result name="findDriving">/drive.jsp</result>
+               <result name="finddriving">/finddriving.jsp</result>
+               <result name="findCircuit">/findCircuit.jsp</result>
+               <result name="findcircuit">/fincircuit.jsp</result>
+         </action>
+     </package>
+</struts>    
